@@ -24,12 +24,11 @@ void control_gpio(uint8_t red, uint8_t blue, uint8_t green, uint8_t buz) {
     gpio_put(buzzer, buz);
 }
 
-int main()
-{
+int main(){
     stdio_init_all();
     config_gpio();
 
-        while (true) {
+    while (true) {
         int x;
         printf("Escolha uma opcao:\n");
         printf("1. Ligar LED Verde\n");
@@ -40,7 +39,7 @@ int main()
         printf("6. Acionar o buzzer\n");
         printf("Opcao: ");
         scanf("%d", &x);
-            switch (x) {
+        switch (x) {
             case 1:
                 control_gpio(0, 0, 1, 0); // Liga LED Verde(green)
                 break;
@@ -64,7 +63,8 @@ int main()
             default:
                 printf("Opcao invalida. Tente novamente.\n");
                 break;
-            }
-
         }
+        sleep_ms(100); // delay para evitar leituras repetidas   
+    }
+    return 0;
 }
