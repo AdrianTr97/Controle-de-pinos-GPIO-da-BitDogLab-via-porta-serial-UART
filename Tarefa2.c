@@ -63,7 +63,7 @@ int main() {
                 break;
             case 5:
                 control_gpio(0, 0, 0, 0); // Desliga todos os LEDs
-                print_status("SYSTEM: OFF");
+                print_status("ALL LEDs OFF");
                 break;
             case 6:
                 control_gpio(0, 0, 0, 1); // Liga o buzzer
