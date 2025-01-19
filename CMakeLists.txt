@@ -60,3 +60,5 @@ target_link_libraries(Tarefa2
 
 pico_add_extra_outputs(Tarefa2)
 
+pico_enable_stdio_usb(Tarefa2 1)
+pico_enable_stdio_uart(Tarefa2 0)
