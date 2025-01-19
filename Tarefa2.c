@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-// Definições dos LEDs RGB
-#define LED_RED 13
-#define LED_BLUE 12
-#define LED_GREEN 11
+// Definições dos GPIOs dos LEDs RGB
+#define led_pin_green 11
+#define led_pin_blue 12
+#define led_pin_red 13
 
-// Definição do buzzer
-#define BUZZER 21
+// Definição do GPIO do buzzer
+#define buzzer 10
 
 
 int main()
