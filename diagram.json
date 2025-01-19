@@ -55,13 +55,7 @@
       "rotate": 90,
       "attrs": { "value": "1000" }
     },
-    {
-      "type": "wokwi-buzzer",
-      "id": "b1",
-      "top": -100.6,
-      "left": 130.15,
-      "rotate": 0      
-    }
+    { "type": "wokwi-buzzer", "id": "b1", "top": -100.6, "left": 130.15, "attrs": {} }
   ],
   "connections": [
     [ "led1:C", "r1:1", "green", [ "v0" ] ],
@@ -73,8 +67,8 @@
     [ "led3:C", "r3:1", "red", [ "v2" ] ],
     [ "pico:GND.4", "r3:2", "black", [ "h2" ] ],
     [ "pico:GP13", "led3:A", "yellow", [ "h2" ] ],
-    [ "pico:GP21", "b1:1", "gray", [ "h4" ] ],
-    [ "pico:GND.6", "b1:2", "white", [ "h4" ] ]
+    [ "pico:GND.6", "b1:1", "black", [ "h0" ] ],
+    [ "pico:GP21", "b1:2", "red", [ "h0" ] ]
   ],
   "dependencies": {}
 }
