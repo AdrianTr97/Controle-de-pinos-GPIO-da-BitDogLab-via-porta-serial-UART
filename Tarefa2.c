@@ -27,9 +27,18 @@ void control_gpio(uint8_t red, uint8_t blue, uint8_t green, uint8_t buz) {
 int main()
 {
     stdio_init_all();
+    config_gpio();
 
-    while (true) {
-        printf("Hello, world!\n");
-        sleep_ms(1000);
-    }
+        while (true) {
+        int x;
+        printf("Escolha uma opcao:\n");
+        printf("1. Ligar LED Verde\n");
+        printf("2. Ligar LED Azul\n");
+        printf("3. Ligar LED Vermelho\n");
+        printf("4. Ligar os tres LEDs (branco)\n");
+        printf("5. Desligar todos os LEDs\n");
+        printf("6. Acionar o buzzer\n");
+        printf("Opcao: ");
+        scanf("%d", &x);
+        }
 }
