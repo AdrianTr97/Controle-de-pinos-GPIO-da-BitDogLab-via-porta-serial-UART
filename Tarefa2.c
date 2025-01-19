@@ -40,5 +40,31 @@ int main()
         printf("6. Acionar o buzzer\n");
         printf("Opcao: ");
         scanf("%d", &x);
+            switch (x) {
+            case 1:
+                control_gpio(0, 0, 1, 0); // Liga LED Verde(green)
+                break;
+            case 2:
+                control_gpio(0, 1, 0, 0); // Liga LED Azul(blue)
+                break;
+            case 3:
+                control_gpio(1, 0, 0, 0); // Liga LED Vermelho (red)
+                break;
+            case 4:
+                control_gpio(1, 1, 1, 0); // Liga todos os LEDs (branco)
+                break;
+            case 5:
+                control_gpio(0, 0, 0, 0); // Desliga todos os LEDs
+                break;
+            case 6:
+                control_gpio(0, 0, 0, 1); // Liga o buzzer
+                sleep_ms(2000); // Delay de 2 segundos
+                control_gpio(0, 0, 0, 0); // Desliga o buzzer
+                break;
+            default:
+                printf("Opcao invalida. Tente novamente.\n");
+                break;
+            }
+
         }
 }
