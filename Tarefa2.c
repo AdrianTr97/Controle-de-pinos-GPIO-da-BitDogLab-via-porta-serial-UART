@@ -7,7 +7,7 @@
 #define led_pin_red 13
 
 // Definição do GPIO do buzzer
-#define buzzer 10
+#define buzzer 21
 
 void config_gpio() {
     // Incializando e configurando GPIOs como saidas
@@ -24,7 +24,11 @@ void control_gpio(uint8_t red, uint8_t blue, uint8_t green, uint8_t buz) {
     gpio_put(buzzer, buz);
 }
 
-int main(){
+void print_status(const char *status) {
+    printf("ON: %s\n", status);
+}
+
+int main() {
     stdio_init_all();
     config_gpio();
 
@@ -39,24 +43,31 @@ int main(){
         printf("6. Acionar o buzzer\n");
         printf("Opcao: ");
         scanf("%d", &x);
+
         switch (x) {
             case 1:
-                control_gpio(0, 0, 1, 0); // Liga LED Verde(green)
+                control_gpio(0, 0, 1, 0); // Liga LED Verde
+                print_status("GREEN");
                 break;
             case 2:
-                control_gpio(0, 1, 0, 0); // Liga LED Azul(blue)
+                control_gpio(0, 1, 0, 0); // Liga LED Azul
+                print_status("BLUE");
                 break;
             case 3:
-                control_gpio(1, 0, 0, 0); // Liga LED Vermelho (red)
+                control_gpio(1, 0, 0, 0); // Liga LED Vermelho
+                print_status("RED");
                 break;
             case 4:
                 control_gpio(1, 1, 1, 0); // Liga todos os LEDs (branco)
+                print_status("WHITE");
                 break;
             case 5:
                 control_gpio(0, 0, 0, 0); // Desliga todos os LEDs
+                print_status("SYSTEM: OFF");
                 break;
             case 6:
                 control_gpio(0, 0, 0, 1); // Liga o buzzer
+                print_status("BUZZER");
                 sleep_ms(2000); // Delay de 2 segundos
                 control_gpio(0, 0, 0, 0); // Desliga o buzzer
                 break;
@@ -64,7 +75,9 @@ int main(){
                 printf("Opcao invalida. Tente novamente.\n");
                 break;
         }
-        sleep_ms(100); // delay para evitar leituras repetidas   
+
+        sleep_ms(100); // delay para evitar leituras repetidas
     }
+
     return 0;
 }
