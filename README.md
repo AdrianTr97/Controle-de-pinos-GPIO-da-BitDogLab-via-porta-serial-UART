@@ -60,16 +60,10 @@ https://drive.google.com/file/d/1b-cUAMXdPRXZDPXY0MJtaE8vnSxkr-qz/view?usp=drive
 
 👨‍💻 **Contribuidores**
 
-°Adrian Trajano
-
-°Eduardo Lino
-
-°Emmanuel Souza
-
-°Gabriel Marcone
-
-°Kauan Teixeira
-
-°Matheus Amorim
-
-°Vitória Tanan
+- [Adrian Trajano](https://github.com/AdrianTr97)
+- [Eduardo Lino](https://github.com/Linosz)
+- [Emmanuel Souza](https://github.com/EmmanuelS-S) 
+- [Gabriel Marcone](https://github.com/gabrielmarcone)
+- [Kauan Teixeira](https://github.com/kauanth21)
+- [Matheus Amorim](https://github.com/Matheus0o0)
+- [Vitória Tanan](https://github.com/vitoriatanan)
