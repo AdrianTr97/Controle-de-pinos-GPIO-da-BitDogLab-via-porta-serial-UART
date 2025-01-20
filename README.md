@@ -22,7 +22,11 @@ Este projeto utiliza uma placa **Raspberry Pi Pico W** para controlar LEDs RGB (
 ---
 
 🛠️ **Instruções de Uso**
-Figura:
+
+![WhatsApp Image 2025-01-19 at 22 49 39](https://github.com/user-attachments/assets/cef0cb82-5716-4cef-8f67-2bc2a6b50fa5)
+
+
+Figura: Simulador Wokwi
 
 ### **1. Conexões de Hardware**
 
@@ -32,23 +36,25 @@ Figura:
 | LED Azul     | GPIO 12        |
 | LED Vermelho | GPIO 13        |
 | Buzzer       | GPIO 21        |
-| GND          | Todos os componentes |
+| GND          |Todos os componentes |
 
 🎹 Mapeamento do Teclado Matricial
-- **Opção 1:** Liga o LED verde.
-- **Opção 2:** Liga o LED azul.
-- **Opção 3:** Liga o LED vermelho.
-- **Opção 4:** Liga todos os LEDs (branco).
-- **Opção 5:** Desliga todos os LEDs.
-- **Opção 6:** Aciona o buzzer por 2 segundos.
+- **Tecla 1:** Liga o LED verde.
+- **Tecla 2:** Liga o LED azul.
+- **Tecla 3:** Liga o LED vermelho.
+- **Tecla 4:** Liga todos os LEDs (branco).
+- **Tecla 5:** Desliga todos os LEDs.
+- **Tecla 6:** Aciona o buzzer por 2 segundos.
 
 🏆 **Resultados Obtidos**
 
 O código foi testado com sucesso e permite controlar LEDs RGB e um buzzer por meio de um menu interativo no terminal serial. Este projeto é ideal para demonstração de controle de GPIOs com microcontroladores.
+
 Solução trabalhada e resultados obtidos no experimento:
 
-Vídeo ensaio (duração máxima de 3 minutos):
+Vídeo ensaio (duração máxima de 3 minutos)
 
+https://drive.google.com/file/d/1b-cUAMXdPRXZDPXY0MJtaE8vnSxkr-qz/view?usp=drivesdk
 
 ---
 
