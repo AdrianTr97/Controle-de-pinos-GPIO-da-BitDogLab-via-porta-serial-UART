@@ -34,15 +34,13 @@ int main() {
 
     while (true) {
         int x;
-        printf("Escolha uma opcao:\n");
-        printf("1. Ligar LED Verde\n");
-        printf("2. Ligar LED Azul\n");
-        printf("3. Ligar LED Vermelho\n");
-        printf("4. Ligar os tres LEDs (branco)\n");
-        printf("5. Desligar todos os LEDs\n");
-        printf("6. Acionar o buzzer\n");
-        printf("Opcao: ");
-        scanf("%d", &x);
+
+        int ch = getchar_timeout_us(1000000); // Timeout de 1 segundo
+        if (ch != PICO_ERROR_TIMEOUT) {
+            x = ch - '0'; // Converte caractere para número
+        } else {
+            continue; // Valor inválido se não houver entrada
+        }
 
         switch (x) {
             case 1:
@@ -63,20 +61,21 @@ int main() {
                 break;
             case 5:
                 control_gpio(0, 0, 0, 0); // Desliga todos os LEDs
-                print_status("ALL LEDs OFF");
+                printf("ALL LEDs OFF");
                 break;
             case 6:
                 control_gpio(0, 0, 0, 1); // Liga o buzzer
                 print_status("BUZZER");
                 sleep_ms(2000); // Delay de 2 segundos
                 control_gpio(0, 0, 0, 0); // Desliga o buzzer
+                printf("OFF: BUZZER\n");
                 break;
             default:
                 printf("Opcao invalida. Tente novamente.\n");
                 break;
         }
 
-        sleep_ms(100); // delay para evitar leituras repetidas
+        sleep_ms(200); // delay para evitar leituras repetidas
     }
 
     return 0;
