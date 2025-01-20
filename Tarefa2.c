@@ -9,15 +9,14 @@
 // Definição do GPIO do buzzer
 #define buzzer 21
 
-void config_gpio() {
-    // Incializando e configurando GPIOs como saidas
+void config_gpio() { // Incializando e configurando GPIOs como saidas
     gpio_init(led_pin_green); gpio_set_dir(led_pin_green, GPIO_OUT);
     gpio_init(led_pin_blue); gpio_set_dir(led_pin_blue, GPIO_OUT);
     gpio_init(led_pin_red); gpio_set_dir(led_pin_red, GPIO_OUT);
     gpio_init(buzzer); gpio_set_dir(buzzer, GPIO_OUT);
 }
-// Função para acionar os pinos
-void control_gpio(uint8_t red, uint8_t blue, uint8_t green, uint8_t buz) {
+
+void control_gpio(uint8_t red, uint8_t blue, uint8_t green, uint8_t buz) { // Função para acionar os pinos
     gpio_put(led_pin_red, red);
     gpio_put(led_pin_blue, blue);
     gpio_put(led_pin_green, green);
@@ -61,7 +60,7 @@ int main() {
                 break;
             case 5:
                 control_gpio(0, 0, 0, 0); // Desliga todos os LEDs
-                printf("ALL LEDs OFF");
+                printf("ALL LEDs OFF\n");
                 break;
             case 6:
                 control_gpio(0, 0, 0, 1); // Liga o buzzer
